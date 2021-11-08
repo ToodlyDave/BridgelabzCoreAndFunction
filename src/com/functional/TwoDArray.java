@@ -1,10 +1,12 @@
 package com.functional;
 
+import java.io.PrintStream;
 import java.util.Scanner;
 
 public class TwoDArray {
 
 	Scanner scan = new Scanner(System.in);
+	PrintStream print = new PrintStream(System.out);
 	
 	public void IntTwoArray(int m, int n) {
 		int[][] array = new int[m][n]; 		
@@ -20,7 +22,7 @@ public class TwoDArray {
 		
 		for (int i = 0; i < m; i++) {
 			for (int j = 0; j < n; j++) {
-				System.out.print(" " + array[i][j]);
+				print.print(" " + array[i][j]);
 			}
 			System.out.println();
 		}
@@ -40,7 +42,7 @@ public class TwoDArray {
 		
 		for (int i = 0; i < m; i++) {
 			for (int j = 0; j < n; j++) {
-				System.out.print(" " + array[i][j]);
+				print.print(" " + array[i][j]);
 			}
 			System.out.println();
 		}
@@ -60,7 +62,7 @@ public class TwoDArray {
 		
 		for (int i = 0; i < m; i++) {
 			for (int j = 0; j < n; j++) {
-				System.out.print(" " + array[i][j]);
+				print.print(" " + array[i][j]);
 			}
 			System.out.println();
 		}
