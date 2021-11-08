@@ -17,9 +17,9 @@ public class ThreeIntegerZero {
 			array[i] = scan.nextInt();
 		}
 		
-		for (int i = 0; i < n; i++) {
-			for (int j = i; j < n; j++) {
-				for (int k = j; k < n; k++) {
+		for (int i = 0; i < n - 2; i++) {
+			for (int j = i + 1; j < n; j++) {
+				for (int k = j + 1; k < n; k++) {
 					if (array[i] + array[j] + array[k] == 0) {
 						System.out.println(" the numbers " + array[i] + ", " + array[j] + ", " + array[k] + " add to 0");
 					}
