@@ -4,19 +4,14 @@ import java.util.Scanner;
 
 public class TwoDArray {
 
-	public void twoArray() {
-		Scanner scan = new Scanner(System.in);
-		int[][] array = new int[50][50]; 
-		
-		System.out.print(" Please enter the value of m: ");
-		int m = scan.nextInt();
-		
-		System.out.print(" Please enter the value of n: ");
-		int n = scan.nextInt();
+	Scanner scan = new Scanner(System.in);
+	
+	public void IntTwoArray(int m, int n) {
+		int[][] array = new int[m][n]; 		
 		
 		for (int i = 0; i < m; i++) {
 			for (int j = 0; j < n; j++) {
-				System.out.print(" Please enter number: ");
+				System.out.print(" Please enter value: ");
 				array[i][j] = scan.nextInt();
 			}
 		}
@@ -24,13 +19,76 @@ public class TwoDArray {
 		System.out.println(" The array: ");
 		
 		for (int i = 0; i < m; i++) {
-			System.out.println();
 			for (int j = 0; j < n; j++) {
 				System.out.print(" " + array[i][j]);
 			}
+			System.out.println();
+		}
+	}
+
+	public void DoubleTwoArray(int m, int n) {
+		double[][] array = new double[m][n]; 		
+		
+		for (int i = 0; i < m; i++) {
+			for (int j = 0; j < n; j++) {
+				System.out.print(" Please enter value: ");
+				array[i][j] = scan.nextDouble();
+			}
 		}
 		
-		scan.close();	
+		System.out.println(" The array: ");
+		
+		for (int i = 0; i < m; i++) {
+			for (int j = 0; j < n; j++) {
+				System.out.print(" " + array[i][j]);
+			}
+			System.out.println();
+		}
+	}
+
+	public void BooleanTwoArray(int m, int n) {
+		boolean[][] array = new boolean[m][n]; 		
+		
+		for (int i = 0; i < m; i++) {
+			for (int j = 0; j < n; j++) {
+				System.out.print(" Please enter value: ");
+				array[i][j] = scan.nextBoolean();
+			}
+		}
+		
+		System.out.println(" The array: ");
+		
+		for (int i = 0; i < m; i++) {
+			for (int j = 0; j < n; j++) {
+				System.out.print(" " + array[i][j]);
+			}
+			System.out.println();
+		}
+	}
+	
+	public void start() {
+		System.out.print(" Please enter the value of m: ");
+		int m = scan.nextInt();
+		
+		System.out.print(" Please enter the value of n: ");
+		int n = scan.nextInt();
+		
+		System.out.println(" Please enter your choice of array type: ");
+		
+		System.out.println(" 1. Integer\n 2. Double\n 3. Booleans");
+		int ch = scan.nextInt();
+		
+		switch(ch) {
+		case 1: 
+			IntTwoArray(m, n);
+			break;
+		case 2: 
+			DoubleTwoArray(m, n);
+			break;
+		case 3: 
+			BooleanTwoArray(m, n);
+			break;
+		}
 		
 	}
 }
