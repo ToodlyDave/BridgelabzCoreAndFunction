@@ -88,6 +88,9 @@ public class TwoDArray {
 		case 3: 
 			BooleanTwoArray(m, n);
 			break;
+		default: 
+			System.out.println(" Please enter a correct choice");
+			break;
 		}
 		
 	}
